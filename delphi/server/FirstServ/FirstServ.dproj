@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{69f7de8d-98fd-4c2d-80be-361138c543db}</ProjectGuid>
+    <MainSource>FirstServ.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>FirstServ.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Alignment>1</DCC_Alignment>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_WriteableConstants>True</DCC_WriteableConstants>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
+    <DCC_RangeChecking>True</DCC_RangeChecking>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Alignment>1</DCC_Alignment>
+    <DCC_WriteableConstants>True</DCC_WriteableConstants>
+    <DCC_IntegerOverflowCheck>True</DCC_IntegerOverflowCheck>
+    <DCC_RangeChecking>True</DCC_RangeChecking>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_DcuOutput>DCU</DCC_DcuOutput>
+    <DCC_ObjOutput>DCU</DCC_ObjOutput>
+    <DCC_HppOutput>DCU</DCC_HppOutput>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><Language><Language Name="ProjectLang">$00000409</Language></Language><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">2</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">Everest Software LLC</VersionInfoKeys><VersionInfoKeys Name="FileDescription">OPC Server Example</VersionInfoKeys><VersionInfoKeys Name="FileVersion">2.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright">© 2008 Everest Software LLC</VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">Peak_Demo_Server</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">2.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments">Mark R. Drake</VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">FirstServ.dpr</Source></Source><TypeLibOptions><TypeLibOptions Name="AutoRegisterTLB">False</TypeLibOptions><TypeLibOptions Name="AutoGenImportAssembly">False</TypeLibOptions></TypeLibOptions></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="FirstServ.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="AsyncUnit.pas" />
+    <DCCReference Include="comcat.pas" />
+    <DCCReference Include="DataPointsUnit.pas" />
+    <DCCReference Include="EnumItemAtt.pas" />
+    <DCCReference Include="Enumstring.pas" />
+    <DCCReference Include="EnumUnknown.pas" />
+    <DCCReference Include="FirstServ_TLB.pas" />
+    <DCCReference Include="Globals.pas" />
+    <DCCReference Include="GroupUnit.pas" />
+    <DCCReference Include="IOPCCommonUnit.pas" />
+    <DCCReference Include="ItemAttributesOPC.pas" />
+    <DCCReference Include="ItemPropIMPL.pas" />
+    <DCCReference Include="ItemsUnit.pas" />
+    <DCCReference Include="Main.pas">
+      <Form>Form1</Form>
+    </DCCReference>
+    <DCCReference Include="OPCErrorStrings.pas" />
+    <DCCReference Include="OPCRemovedGroupUnit.pas" />
+    <DCCReference Include="OPC_Defines\OPCCOMN.pas" />
+    <DCCReference Include="OPC_Defines\OPCDA.pas" />
+    <DCCReference Include="OPC_Defines\OPCerror.pas" />
+    <DCCReference Include="OPC_Defines\OPCHDA.pas" />
+    <DCCReference Include="OPC_Defines\OPCSEC.pas" />
+    <DCCReference Include="OPC_Defines\OPCtypes.pas" />
+    <DCCReference Include="OPC_Defines\OPC_AE.pas" />
+    <DCCReference Include="RegDeRegServer.pas" />
+    <DCCReference Include="ServIMPL.pas" />
+    <DCCReference Include="ShutDownRequest.pas">
+      <Form>ShutDownDlg</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>

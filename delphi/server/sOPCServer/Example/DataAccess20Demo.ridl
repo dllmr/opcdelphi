@@ -1,0 +1,69 @@
+// ************************************************************************ //
+// WARNUNG                                                                    
+// -------                                                                    
+// Diese Datei wird von dem Typbibliotheks-Importer oder dem Typbibliothekseditor 
+// erzeugt. Außer Syntaxfehlern analysiert der Editor an der Datei vorgenommene 
+// Änderungen. Wenn Sie aber Änderungen mit dem Editor vornehmen, wird diese  
+// Datei neu erzeugt und Kommentare oder Formatänderungen gehen verloren.     
+// ************************************************************************ //
+// Datei erzeugt am  23.02.2009 09:31:58 (- $Rev: 12980 $, 4168437).
+
+
+[
+  uuid(118921D1-0703-11D5-962A-00A024AEBA44), 
+  version(1.0), 
+  helpstring("sOPC Demo OPC DA2 Server Library")
+    
+]
+library sOPC
+{
+
+  importlib("stdole2.tlb");
+
+  interface IOPCDataAccess20;
+  interface IOPCGroup;
+  coclass OPCGroup;
+  coclass OPCDataAccess20;
+
+
+  [
+    uuid(118921D2-0703-11D5-962A-00A024AEBA44), 
+    version(1.0), 
+    helpstring("OPC Data Access Interface v2.0"), 
+    dual, 
+    oleautomation
+  ]
+  interface IOPCDataAccess20: IDispatch
+  {
+  };
+
+  [
+    uuid(118921D4-0703-11D5-962A-00A024AEBA44), 
+    version(1.0), 
+    helpstring("OPC Group Interface")
+  ]
+  interface IOPCGroup: IUnknown
+  {
+  };
+
+  [
+    uuid(118921D6-0703-11D5-962A-00A024AEBA44), 
+    version(1.0), 
+    helpstring("OPC Group Object")
+  ]
+  coclass OPCGroup
+  {
+    [default] interface IOPCGroup;
+  };
+
+  [
+    uuid(118921D8-0703-11D5-962A-00A024AEBA44), 
+    version(1.0), 
+    helpstring("OPC Data Access Object v2.0")
+  ]
+  coclass OPCDataAccess20
+  {
+    [default] interface IOPCDataAccess20;
+  };
+
+};

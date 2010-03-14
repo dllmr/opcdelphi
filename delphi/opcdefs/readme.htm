@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Delphi OPC Programming</title>
+</head>
+
+<body>
+  <h1>Delphi OPC Programming</h1>
+
+  <h3>Introduction</h3>
+
+  <p>This document, and the ZIP archive of which it is part, are intended to
+  help give a brief introduction to OPC (formerly OLE for Process Control)
+  development using Embarcadero (formerly Borland) Delphi.</p>
+
+  <p>The ZIP file contains Delphi translations of the published OPC custom
+  interfaces, i.e. OPC Common 1.1, Data Access 3.0 (and earlier), Alarms &amp;
+  Events 1.10, Historical Data Access 1.2 and Security 1.0.</p>
+
+  <p>The code has been confirmed to be compatible with with Delphi 3 to 7, and
+  Delphi 2005 to 2010 for Win32.</p>
+
+  <p>The <a href="http://www.opcconnect.com/delphi.php">Delphi page</a> at OPC
+  Programmers&#39; Connection also has Delphi source code for a demo OPC client
+  and server.</p>
+
+  <h3>Version History</h3>
+
+  <p><b>September 2nd 2009:</b> Confirmed compatibility with Delphi 2010 (no
+  code changes).</p>
+
+  <p><b>October 5th 2008:</b> Confirmed compatibility with Delphi 2009 (no code
+  changes).</p>
+
+  <p><b>December 11th 2003:</b> Added error codes for Complex Data 1.0. Added
+  OPCHDA_PARTIAL quality for HDA 1.2.</p>
+
+  <p><b>March 10th 2003:</b> Updated for Data Access 3.0.</p>
+
+  <p><b>October 31st 2002:</b> Added support for new OPC Alarms &amp; Events
+  1.10 interfaces: IOPCEventServer2 and IOPCEventSubscriptionMgt2.</p>
+
+  <p><b>October 22nd 2002:</b> Added support for new OPC Common 1.1 interfaces:
+  IOPCServerList2 and IOPCEnumGUID.</p>
+
+  <p><b>September 13th 2002:</b> Added support for OPC Security 1.0 (unit
+  contributed by <a href="mailto:ikysil@ua.fm">Illya Kysil</a>).</p>
+
+  <p><b>September 6th 2002:</b> Corrected OPC_WRITABLE to OPC_WRITEABLE in
+  OPCDA.pas.</p>
+
+  <p><b>September 3rd 2002:</b> Minor changes for compatibility with Delphi
+  7.0.</p>
+
+  <p><b>August 6th 2002:</b> Updated OPCHDA.pas to correct declaration of
+  IOPCHDA_SyncRead.ReadAttribute (thanks to Arjan Lamaker for pointing out the
+  error). Also updated Internet addresses in file header comments.</p>
+
+  <p><b>July 26th 2002:</b> Updated OPCHDA.pas to explicitly declare const
+  CATID_OPCHDAServer10 as a TGUID.</p>
+
+  <p><b>July 22nd 2002:</b> Updated OPCDA.pas with corrected item property IDs
+  (200 to 207) from Data Access 2.05A specification.</p>
+
+  <p><b>July 5th 2001:</b> Confirmed compatibility with Delphi 6.0 (no code
+  changes).</p>
+
+  <p><b>June 20th 2001:</b> Added support for OPC Historical Data Access 1.1
+  (with help from <a href="mailto:ikysil@ua.fm">Illya Kysil</a>).</p>
+
+  <p><b>June 19th 2001:</b> Removed unneeded IID_IEnumString declarations.</p>
+
+  <p><b>March 7th 2001:</b> Pascal type definitions modified for all interface
+  input parameters which are of array types. This is to more accurately
+  indicate the required data. As a consequence, any client which implements the
+  IOPCDataCallback interface will need minor code changes.</p>
+
+  <p>Factored out common type definitions into new file OPCtypes.pas; this
+  should be added to the uses list of all source files which make use of OPC
+  interfaces. This change is needed to avoid compilation errors when using the
+  Data Access and Alarms &amp; Events interfaces from the same unit.</p>
+
+  <p>Definition removed for type PWORDARRAY to prevent possible conflict with
+  the Delphi SysUtils unit.</p>
+
+  <p><b>October 26th 1999:</b> Extra type definitions added to OPCDA.pas, for
+  use with connection points.</p>
+
+  <p><b>October 12th 1999:</b> OPC interface files and sample client program
+  now packaged separately.</p>
+
+  <p><b>September 11th 1999:</b> Now works with Delphi 3, 4 and 5.</p>
+
+  <p><b>June 22nd 1999:</b> Original version, compatible with Delphi 4.</p>
+
+  <h3>File List</h3>
+
+  <p>Inside the ZIP archive you will find the following files.</p>
+
+  <table border="0" cellspacing="0" cellpadding="0" summary="">
+    <tr>
+      <td><b>OPCCOMN.pas</b></td>
+
+      <td width="50">&nbsp;</td>
+
+      <td>OPC Common 1.1 interfaces</td>
+    </tr>
+
+    <tr>
+      <td><b>OPCDA.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>OPC Data Access 3.0 (and earlier) interfaces</td>
+    </tr>
+
+    <tr>
+      <td><b>OPC_AE.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>OPC Alarms &amp; Events 1.10 custom interfaces</td>
+    </tr>
+
+    <tr>
+      <td><b>OPCerror.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>OPC error and status codes</td>
+    </tr>
+
+    <tr>
+      <td><b>OPCHDA.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>OPC Historical Data Access 1.1 custom interfaces</td>
+    </tr>
+
+    <tr>
+      <td><b>OPCSEC.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>OPC Security 1.0 custom interfaces</td>
+    </tr>
+
+    <tr>
+      <td><b>OPCtypes.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>Shared type definitions</td>
+    </tr>
+
+    <tr>
+      <td><b>readme.htm</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>This file</td>
+    </tr>
+  </table>
+
+  <h3>Converting the OPC Definitions</h3>
+
+  <p>In each case, the initial conversion of the OPC interfaces was performed
+  using Delphi&#39;s standard &#39;Import Type Library&#39; function,
+  specifying the relevant proxy/stub DLL as the type library file. This results
+  in a set of definitions which works correctly for the most part, but is not
+  entirely satisfactory. There are several reasons for this:</p>
+
+  <ul>
+    <li>In some cases, certain type name information is missing from the type
+    library itself. For example, using Microsoft&#39;s OLE/COM Object Viewer to
+    examine the Alarms &amp; Events type library reveals that most of the
+    struct and enum types have had their original names replaced with names
+    auto-generated by MIDL. The original type names have therefore been
+    manually retro-fitted.</li>
+
+    <li>There currently appear to be some minor problems with Delphi&#39;s
+    ability to import non-automation type libraries.</li>
+
+    <li>In the original C and IDL files, the relevant declarations are
+    distributed among several different files. For example, the CATIDs for Data
+    Access 2.0 are defined separately from the other DA 2.0 GUIDs. It is
+    helpful to combine some of these files to reduce the number of Pascal units
+    which are required.</li>
+
+    <li>There is scope for improving the layout and readability of the files
+    auto-generated by Delphi.</li>
+  </ul>
+
+  <h3>Acknowledgements</h3>
+
+  <p>Some of the work of porting the OPC interfaces to Delphi was performed
+  initially while working at Eurotherm Limited. Their cooperation in allowing
+  this code to be published is gratefully acknowledged. The <a href=
+  "http://www.eurotherm.com/itools/">iTools</a> suite of applications from
+  Eurotherm includes several OPC client programs developed using Delphi.</p>
+
+  <p>Thanks are also due to the many Delphi OPC developers who have contributed
+  ideas, suggestions, and corrections.</p>
+
+  <h3>Disclaimer</h3>
+
+  <p>Although every effort has been made to faithfully convert the original C
+  and IDL declarations to Delphi, and the results have been used and tested
+  extensively, I can&#39;t of course actually <i>guarantee</i> their
+  correctness. Neither will I be held responsible for any loss or damage
+  arising from their use.</p>
+
+  <p>I would be grateful to know of any problems with these files.</p>
+
+  <p>Mike Dillamore<br />
+  OPC Programmers&#39; Connection<br />
+  <a href="http://www.opcconnect.com/">http://www.opcconnect.com/</a><br />
+  <a href="mailto:opc@opcconnect.com">mailto:opc@opcconnect.com</a></p>
+
+  <p>September 2nd 2009</p>
+</body>
+</html>

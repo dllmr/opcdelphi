@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Simple Delphi OPC Client</title>
+</head>
+
+<body>
+  <h1>Simple Delphi OPC Client</h1>
+
+  <h3>Introduction</h3>
+
+  <p>This document, and the ZIP archive of which it is part, are intended to
+  help give a brief introduction to OLE for Process Control (OPC) client
+  programming using Embarcadero (formerly Borland) Delphi.</p>
+
+  <p>The ZIP file contains Delphi source code for a simple OPC client
+  application.</p>
+
+  <p>You will also need the Delphi conversion of the OPC custom interfaces,
+  available separately from the <a href=
+  "http://www.opcconnect.com/delphi.php">Delphi page</a> at OPC
+  Programmers&#39; Connection.</p>
+
+  <p>The code has been confirmed to be compatible with with Delphi 5 to 7, and
+  Delphi 2005 to 2010 for Win32.</p>
+
+  <h3>Version History</h3>
+
+  <p><b>September 2nd 2009:</b> Minor changes for compatibility with Delphi
+  2010.</p>
+
+  <p><b>September 28th 2008:</b> Minor changes for compatibility with Delphi
+  2009 for Win32.</p>
+
+  <p><b>January 2nd 2006:</b> Minor changes for compatibility with Delphi 2006
+  for Win32.</p>
+
+  <p><b>November 28th 2004:</b> Minor changes for compatibility with Delphi
+  2005 for Win32.</p>
+
+  <p><b>September 3rd 2002:</b> Minor changes for compatibility with Delphi
+  7.0.</p>
+
+  <p><b>July 12th 2001:</b> ServerAddGroup function in OPCutils.pas modified to
+  take the client handle for the group as a parameter.</p>
+
+  <p><b>July 5th 2001:</b> Now compatible with Delphi 6 (new Variants unit
+  conditionally added to uses lists as required).</p>
+
+  <p><b>March 7th 2001:</b> Minor changes to reflect modified Pascal definition
+  for the IOPCDataCallback interface, and the need to use the new OPCtypes.pas
+  unit.</p>
+
+  <p><b>June 8th 2000:</b> Added wrapper function (and call to it) for
+  IOPCSyncIO.Write.</p>
+
+  <p><b>February 21st 2000:</b> Updated to make use of connection point system
+  for data callbacks, as well as the older IDataObject/IAdviseSink
+  mechanism.</p>
+
+  <p><b>January 24th 2000:</b> Client program updated to use modified
+  Simulation Server from Matrikon.</p>
+
+  <p><b>October 12th 1999:</b> OPC interface files and sample client program
+  now packaged separately.</p>
+
+  <p><b>September 11th 1999:</b> Now works with Delphi 3, 4 and 5. Added
+  CoInitializeSecurity call to prevent blocking of advise callbacks with
+  certain configurations of DCOM.</p>
+
+  <p><b>June 22nd 1999:</b> Original version, compatible with Delphi 4.</p>
+
+  <h3>File List</h3>
+
+  <p>Inside the ZIP archive you will find the following files.</p>
+
+  <table border="0" cellspacing="0" cellpadding="0" summary="">
+    <tr>
+      <td><b>OPCquick.*</b></td>
+
+      <td width="50">&nbsp;</td>
+
+      <td>Main application files</td>
+    </tr>
+
+    <tr>
+      <td><b>OPCutils.pas</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>Miscellaneous utility functions</td>
+    </tr>
+
+    <tr>
+      <td><b>readme-client.htm</b></td>
+
+      <td>&nbsp;</td>
+
+      <td>This file</td>
+    </tr>
+  </table>
+
+  <p>The Pascal source code for the sample application is in OPCquick.dpr.</p>
+
+  <h3>General Issues</h3>
+
+  <p>The custom OPC interfaces have been used throughout. This leads to greater
+  runtime efficiency, easier system configuration, and maximum code
+  reusability. As supplied, the client program connects to a sample OPC server
+  from MatrikonOPC (<a href=
+  "http://www.matrikonopc.com/">http://www.matrikonopc.com/</a>), but it is a
+  trivial matter to change this.</p>
+
+  <p>So as to be as small as possible, the client program is a console
+  application. However, it uses a number of the key OPC methods, including
+  synchronous reading and writing, and asynchronous notifications via an advise
+  sink.</p>
+
+  <p>Non-Delphi programmers should find the code very readable. Note the use of
+  the keyword <b>as</b>; this is a simple and elegant way of performing a
+  QueryInterface (<b>as</b> is used elsewhere in Object Pascal for dynamic
+  typecasting). Note also the absence of calls to AddRef and Release: COM
+  reference counting is handled automatically by Delphi.</p>
+
+  <h3>Acknowledgements</h3>
+
+  <p>Some of the work of porting the OPC interfaces to Delphi was performed
+  initially while working at Eurotherm Limited. Their cooperation in allowing
+  this code to be published is gratefully acknowledged. The <a href=
+  "http://www.eurotherm.com/itools/">iTools</a> suite of applications from
+  Eurotherm includes several OPC client programs developed using Delphi.</p>
+
+  <p>Thanks are also due to the many Delphi OPC developers who have contributed
+  ideas, suggestions, and corrections.</p>
+
+  <h3>Disclaimer</h3>
+
+  <p>Although every effort has been made to faithfully convert the original C
+  and IDL declarations to Object Pascal, and the results have been used and
+  tested extensively, I can&#39;t of course actually <i>guarantee</i> their
+  correctness. Neither will I be held responsible for any loss or damage
+  arising from their use.</p>
+
+  <p>I would be grateful to know of any problems with these files.</p>
+
+  <p>Mike Dillamore<br />
+  OPC Programmers&#39; Connection<br />
+  <a href="http://www.opcconnect.com/">http://www.opcconnect.com/</a><br />
+  <a href="mailto:opc@opcconnect.com">mailto:opc@opcconnect.com</a></p>
+
+  <p>September 2nd 2009</p>
+</body>
+</html>

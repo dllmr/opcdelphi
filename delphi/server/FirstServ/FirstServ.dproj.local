@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2008/01/17 12:24:17.216.pas,C:\Text\OPC-mine\OPC_Publish\Unit1.pas=C:\Text\OPC-mine\OPC_Publish\OPCRemovedGroupUnit.pas</Transaction>
+    <Transaction>2008/01/17 18:39:28.203.pas,C:\Text\OPC-mine\OPC_Publish\Unit1.pas=C:\Text\OPC-mine\OPC_Publish\IOPCCommonUnit.pas</Transaction>
+    <Transaction>2008/01/18 10:36:54.312.pas,C:\Text\OPC-mine\OPC_Publish\Unit1.pas=C:\Text\OPC-mine\OPC_Publish\DataPointsUnit.pas</Transaction>
+  </Transactions>
+</BorlandProject>
