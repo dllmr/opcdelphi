@@ -1,0 +1,236 @@
+# ---------------------------------------------------------------------------
+!if !$d(BCB)
+BCB = $(MAKEDIR)\..
+!endif
+
+# ---------------------------------------------------------------------------
+# IDE SECTION
+# ---------------------------------------------------------------------------
+# The following section of the project makefile is managed by the BCB IDE.
+# It is recommended to use the IDE to change any of the values in this
+# section.
+# ---------------------------------------------------------------------------
+
+VERSION = BCB.04.04
+# ---------------------------------------------------------------------------
+PROJECT = OPClient.exe
+OBJFILES = OPClient.obj opc\Opcda_i.obj opc\Opccomn_i.obj DataCallbackSink.obj atlprj.obj \
+  opc\opcda_cats.obj opc\opcenum_clsid.obj Main.obj
+RESFILES = OPClient.res
+DEFFILE =
+RESDEPEN = $(RESFILES) Main.dfm
+LIBFILES =
+LIBRARIES = vclnp40.lib rxdb4.lib rxctl4.lib vcldb40.lib vclx40.lib vcl40.lib
+SPARELIBS = vcl40.lib vclx40.lib vcldb40.lib rxctl4.lib rxdb4.lib
+PACKAGES = vclx40.bpi vcl40.bpi vcldb40.bpi vcldbx40.bpi bcbsmp40.bpi dclocx40.bpi \
+  qrpt40.bpi teeui40.bpi teedb40.bpi tee40.bpi ibsmp40.bpi dss40.bpi nmfast40.bpi \
+  inetdb40.bpi inet40.bpi vclmid40.bpi rxctl4.bpi rxdb4.bpi
+# ---------------------------------------------------------------------------
+PATHCPP = .;opc
+PATHPAS = .;
+PATHASM = .;
+PATHRC = .;
+DEBUGLIBPATH = $(BCB)\lib\debug
+RELEASELIBPATH = $(BCB)\lib\release
+SYSDEFINES = NO_STRICT;USING_ATLVCL;_ATL_SINGLE_THREADED
+USERDEFINES = USING_ATLVCL;_ATL_SINGLE_THREADED
+# ---------------------------------------------------------------------------
+CFLAG1 = -Iopc;$(BCB)\include;$(BCB)\include\atl;$(BCB)\include\vcl;"..\..\program files\borland\CBuilder4\Imports";"..\..\Program Files\Borland\RX\Units" \
+  -Od -Hc -H=$(BCB)\lib\vcl40.csm -w -Ve -Tkh30000 -r- -a8 -k -y -v -vi- \
+  -D$(SYSDEFINES);$(USERDEFINES) -c -b- -w-par -w-inl -Vx -tW -tWM
+CFLAG2 =
+CFLAG3 =
+PFLAGS = -Uopc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;"..\..\Program Files\Borland\CBuilder4\Imports";"..\..\Program Files\Borland\RX\Units";$(RELEASELIBPATH) \
+  -Iopc;$(BCB)\include;$(BCB)\include\atl;$(BCB)\include\vcl;"..\..\program files\borland\CBuilder4\Imports";"..\..\Program Files\Borland\RX\Units" \
+  -DUSING_ATLVCL;_ATL_SINGLE_THREADED -$YD -$W -$O- -v -M -JPHNE
+RFLAGS = -iopc;$(BCB)\include;$(BCB)\include\atl;$(BCB)\include\vcl;"..\..\program files\borland\CBuilder4\Imports";"..\..\Program Files\Borland\RX\Units" \
+  -DUSING_ATLVCL;_ATL_SINGLE_THREADED
+AFLAGS = /iopc /i$(BCB)\include /i$(BCB)\include\atl /i$(BCB)\include\vcl \
+  /i"..\..\program files\borland\CBuilder4\Imports" \
+  /i"..\..\Program Files\Borland\RX\Units" /dUSING_ATLVCL /d_ATL_SINGLE_THREADED \
+  /mx /w2 /zd
+LFLAGS = -Lopc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;"..\..\Program Files\Borland\CBuilder4\Imports";"..\..\Program Files\Borland\RX\Units";$(RELEASELIBPATH) \
+  -aa -Tpe -x -Gn -v
+IFLAGS =
+# ---------------------------------------------------------------------------
+ALLOBJ = c0w32.obj sysinit.obj $(OBJFILES)
+ALLRES = $(RESFILES)
+ALLLIB = $(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib
+# ---------------------------------------------------------------------------
+!ifdef IDEOPTIONS
+
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Deployment]
+DeployDir=
+DeployURL=
+HTMLDir=
+CABCompress=0
+CodeSign=0
+IncludeVerInfo=1
+AutoIncRelease=0
+DeployPackages=1
+DeployFiles=1
+CompanyURL=
+Description=
+CredFile=
+PrivKey=
+CryptoType=0
+Timestamping=0
+TimestampServer=
+
+[HistoryLists\hlIncludePath]
+Count=12
+Item0=opc;$(BCB)\include;$(BCB)\include\atl;$(BCB)\include\vcl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item1=opc;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item2=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units;.\opc
+Item3=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;e:\program files\borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;e:\program files\borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;e:\program files\borland\CBuilder4\Imports;E:\Program Files\Borland\RX\Units
+Item4=
+Item5=
+Item6=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;$(BCB)\Imports;e:\Program Files\Borland\rx\units
+Item7=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;$(BCB)\Imports\;c:\delphi\rx\units
+Item8=e:\program files\borland\CBuilder4\Imports;e:\program files\borland\CBuilder4\Imports\;..\..\..\..\delphi\rx\units;d:\program files\borland\cbuilder3\bin\;d:\program files\borland\cbuilder3\lib\;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;c:\delphi\rx\units
+Item9=e:\program files\borland\CBuilder4\Imports;..\..\..\..\delphi\rx\units;d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include;$(BCB)\include\atl
+Item10=..\..\..\..\delphi\rx\units;d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include;$(BCB)\include\atl
+Item11=d:\program files\borland\cbuilder3\lib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include;$(BCB)\include\atl
+
+[HistoryLists\hlLibraryPath]
+Count=11
+Item0=opc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;..\..\Program Files\Borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item1=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;..\..\Program Files\Borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item2=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;E:\Program Files\Borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;E:\Program Files\Borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\Projects\Lib;$(BCB)\lib\obj;E:\Program Files\Borland\CBuilder4\Imports;E:\Program Files\Borland\RX\Units
+Item3=
+Item4=
+Item5=e:\program files\borland\CBuilder4\Imports;e:\program files\borland\CBuilder4\Imports\;$(BCB)\Projects\Lib;d:\program files\borland\cbuilder3\bin\;d:\program files\borland\cbuilder3\lib\;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\libl;e:\Program Files\Borland\rx\units
+Item6=e:\program files\borland\CBuilder4\Imports
+Item7=e:\program files\borland\CBuilder4\Imports;e:\program files\borland\CBuilder4\Imports\;$(BCB)\Projects\Lib;d:\program files\borland\cbuilder3\bin\;d:\program files\borland\cbuilder3\lib\;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\libl;c:\delphi\rx\units
+Item8=e:\program files\borland\CBuilder4\Imports;$(BCB)\Projects\Lib;d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\lib
+Item9=d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\lib
+Item10=d:\program files\borland\cbuilder3\lib;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=4
+Item0=USING_ATLVCL;_ATL_SINGLE_THREADED
+Item1=USING_ATLVCL;NO_IMPLICIT_NAMESPACE_USE;_ATL_SINGLE_THREADED
+Item2=USING_ATLVCL,NO_IMPLICIT_NAMESPACE_USE
+Item3=_RTLDLL;USEPACKAGES;USING_ATLVCL
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+InMemoryExe=0
+ShowInfoMsgs=0
+
+!endif
+
+# ---------------------------------------------------------------------------
+# MAKE SECTION
+# ---------------------------------------------------------------------------
+# This section of the project file is not used by the BCB IDE.  It is for
+# the benefit of building from the command-line using the MAKE utility.
+# ---------------------------------------------------------------------------
+
+.autodepend
+# ---------------------------------------------------------------------------
+!if !$d(BCC32)
+BCC32 = bcc32
+!endif
+
+!if !$d(DCC32)
+DCC32 = dcc32
+!endif
+
+!if !$d(TASM32)
+TASM32 = tasm32
+!endif
+
+!if !$d(LINKER)
+LINKER = ilink32
+!endif
+
+!if !$d(BRCC32)
+BRCC32 = brcc32
+!endif
+# ---------------------------------------------------------------------------
+!if $d(PATHCPP)
+.PATH.CPP = $(PATHCPP)
+.PATH.C   = $(PATHCPP)
+!endif
+
+!if $d(PATHPAS)
+.PATH.PAS = $(PATHPAS)
+!endif
+
+!if $d(PATHASM)
+.PATH.ASM = $(PATHASM)
+!endif
+
+!if $d(PATHRC)
+.PATH.RC  = $(PATHRC)
+!endif
+# ---------------------------------------------------------------------------
+$(PROJECT): $(OBJFILES) $(RESDEPEN) $(DEFFILE)
+    $(BCB)\BIN\$(LINKER) @&&!
+    $(LFLAGS) +
+    $(ALLOBJ), +
+    $(PROJECT),, +
+    $(ALLLIB), +
+    $(DEFFILE), +
+    $(ALLRES)
+!
+# ---------------------------------------------------------------------------
+.pas.hpp:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.pas.obj:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.cpp.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) $(CFLAG2) $(CFLAG3) -n$(@D) {$< }
+
+.c.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) $(CFLAG2) $(CFLAG3) -n$(@D) {$< }
+
+.asm.obj:
+    $(BCB)\BIN\$(TASM32) $(AFLAGS) $<, $@
+
+.rc.res:
+    $(BCB)\BIN\$(BRCC32) $(RFLAGS) -fo$@ $<
+# ---------------------------------------------------------------------------

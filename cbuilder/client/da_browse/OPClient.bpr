@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value=".\bin\OPClient.exe"/>
+    <OBJFILES value="bin\OPClient.obj bin\Main.obj bin\Opcda_i.obj bin\Opccomn_i.obj 
+      bin\DataCallbackSink.obj bin\atlprj.obj bin\OPClient_TLB.obj"/>
+    <RESFILES value="OPClient.res OPClient.tlb"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Main.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vclnp.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib vclx.lib dbrtl.lib vcldb.lib bdertl.lib"/>
+    <PACKAGES value="vclx.bpi rtl.bpi vcl.bpi dbrtl.bpi vcldb.bpi bdertl.bpi vcldbx.bpi 
+      bcbsmp.bpi dclocx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi ibsmp.bpi 
+      dss.bpi nmfast.bpi inetdb.bpi inet.bpi dsnap.bpi"/>
+    <PATHCPP value=".;opc;opc"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="USING_ATLVCL;_ATL_SINGLE_THREADED"/>
+    <SYSDEFINES value="NO_STRICT;USING_ATLVCL;_ATL_SINGLE_THREADED;INC_ATL_HEADERS;USEPACKAGES"/>
+    <MAINSOURCE value="OPClient.cpp"/>
+    <INCLUDEPATH value=".;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;&quot;..\..\program files\borland\CBuilder4\Imports&quot;;&quot;..\..\Program Files\Borland\RX\Units&quot;;opc"/>
+    <LIBPATH value=".;opc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;&quot;..\..\Program Files\Borland\CBuilder4\Imports&quot;;&quot;..\..\Program Files\Borland\RX\Units&quot;"/>
+    <WARNINGS value="-w-par -w-8027 -w-8026"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I. -I$(BCB)\include -I$(BCB)\include\vcl -I$(BCB)\include\atl 
+      -I&quot;..\..\program files\borland\CBuilder4\Imports&quot; 
+      -I&quot;..\..\Program Files\Borland\RX\Units&quot; -Iopc -src_suffix cpp 
+      -DUSING_ATLVCL -D_ATL_SINGLE_THREADED -boa"/>
+    <CFLAG1 value="-Od -H=c:\PROGRA~1\borland\CBUILD~1\lib\vcl60.csm -Hc -Vx -Ve -Tkh30000 
+      -VF -X- -r- -a8 -b- -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-N2.\bin -N0.\bin -$YD -$W -$O- -$A8 -v -M -JPHNE"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-l.\bin -I.\bin -D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="OPClient.cpp" FORMNAME="" UNITNAME="OPClient" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPClient.res" FORMNAME="" UNITNAME="OPClient" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Main.cpp" FORMNAME="MainForm" UNITNAME="Main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="opc\Opcda_i.c" FORMNAME="" UNITNAME="Opcda_i" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="opc\Opccomn_i.c" FORMNAME="" UNITNAME="Opccomn_i" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DataCallbackSink.cpp" FORMNAME="" UNITNAME="DataCallbackSink" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="atlprj.cpp" FORMNAME="" UNITNAME="atlprj" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPClient.tlb" FORMNAME="" UNITNAME="OPClient.tlb" CONTAINERID="TypeLibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="OPClient_TLB.cpp" FORMNAME="" UNITNAME="OPClient_TLB" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Deployment]
+DeployDir=
+DeployURL=
+HTMLDir=
+CABCompress=0
+CodeSign=0
+IncludeVerInfo=1
+AutoIncRelease=0
+DeployPackages=1
+DeployFiles=1
+CompanyURL=
+Description=
+CredFile=
+PrivKey=
+CryptoType=0
+Timestamping=0
+TimestampServer=
+
+[Excluded Packages]
+c:\program files\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=13
+Item0=.;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units;opc
+Item1=.\;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units;opc
+Item2=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units;opc
+Item3=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;..\..\program files\borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units;.\opc
+Item4=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;e:\program files\borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;e:\program files\borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;e:\program files\borland\CBuilder4\Imports;E:\Program Files\Borland\RX\Units
+Item5=
+Item6=
+Item7=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;$(BCB)\Imports;e:\Program Files\Borland\rx\units
+Item8=$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;$(BCB)\Imports\;c:\delphi\rx\units
+Item9=e:\program files\borland\CBuilder4\Imports;e:\program files\borland\CBuilder4\Imports\;..\..\..\..\delphi\rx\units;d:\program files\borland\cbuilder3\bin\;d:\program files\borland\cbuilder3\lib\;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include\atl;c:\delphi\rx\units
+Item10=e:\program files\borland\CBuilder4\Imports;..\..\..\..\delphi\rx\units;d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include;$(BCB)\include\atl
+Item11=..\..\..\..\delphi\rx\units;d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include;$(BCB)\include\atl
+Item12=d:\program files\borland\cbuilder3\lib;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\include;$(BCB)\include\atl
+
+[HistoryLists\hlLibraryPath]
+Count=13
+Item0=.;opc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;..\..\Program Files\Borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item1=.\;opc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;..\..\Program Files\Borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item2=opc;$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;..\..\Program Files\Borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item3=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;..\..\Program Files\Borland\CBuilder4\Imports;..\..\Program Files\Borland\RX\Units
+Item4=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;E:\Program Files\Borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\Lib;$(BCB)\lib\obj;$(BCB)\Projects\Lib;E:\Program Files\Borland\CBuilder4\Imports\;E:\Program Files\Borland\RX\UnitsItem1=$(BCB)\Projects\Lib;$(BCB)\lib\obj;E:\Program Files\Borland\CBuilder4\Imports;E:\Program Files\Borland\RX\Units
+Item5=
+Item6=
+Item7=e:\program files\borland\CBuilder4\Imports;e:\program files\borland\CBuilder4\Imports\;$(BCB)\Projects\Lib;d:\program files\borland\cbuilder3\bin\;d:\program files\borland\cbuilder3\lib\;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\libl;e:\Program Files\Borland\rx\units
+Item8=e:\program files\borland\CBuilder4\Imports
+Item9=e:\program files\borland\CBuilder4\Imports;e:\program files\borland\CBuilder4\Imports\;$(BCB)\Projects\Lib;d:\program files\borland\cbuilder3\bin\;d:\program files\borland\cbuilder3\lib\;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\libl;c:\delphi\rx\units
+Item10=e:\program files\borland\CBuilder4\Imports;$(BCB)\Projects\Lib;d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\lib
+Item11=d:\program files\borland\cbuilder3\bin;d:\program files\borland\cbuilder3\lib;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\lib
+Item12=d:\program files\borland\cbuilder3\lib;..\..\..\..\delphi\rx\units;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=4
+Item0=USING_ATLVCL;_ATL_SINGLE_THREADED
+Item1=USING_ATLVCL;NO_IMPLICIT_NAMESPACE_USE;_ATL_SINGLE_THREADED
+Item2=USING_ATLVCL,NO_IMPLICIT_NAMESPACE_USE
+Item3=_RTLDLL;USEPACKAGES;USING_ATLVCL
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=.\bin
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=.\bin
+
+[HistoryLists\hIBPIOutputDir]
+Count=1
+Item0=.\bin
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+  </IDEOPTIONS>
+</PROJECT>
