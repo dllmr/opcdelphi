@@ -10,24 +10,9 @@ program OPCquick;
 {$ENDIF}
 
 uses
-{$IFDEF VER140}
+{$IF CompilerVersion >= 14}
   Variants,
-{$ENDIF}
-{$IFDEF VER150}
-  Variants,
-{$ENDIF}
-{$IFDEF VER170}
-  Variants,
-{$ENDIF}
-{$IFDEF VER180}
-  Variants,
-{$ENDIF}
-{$IFDEF VER200}
-  Variants,
-{$ENDIF}
-{$IFDEF VER210}
-  Variants,
-{$ENDIF}
+{$IFEND}
   Windows, Forms, ComObj, ActiveX, SysUtils, OPCtypes, OPCDA, OPCutils;
 
 {$R *.RES}

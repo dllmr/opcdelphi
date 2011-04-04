@@ -11,24 +11,9 @@ unit OPCutils;
 interface
 
 uses
-{$IFDEF VER140}
+{$IF CompilerVersion >= 14}
   Variants,
-{$ENDIF}
-{$IFDEF VER150}
-  Variants,
-{$ENDIF}
-{$IFDEF VER170}
-  Variants,
-{$ENDIF}
-{$IFDEF VER180}
-  Variants,
-{$ENDIF}
-{$IFDEF VER200}
-  Variants,
-{$ENDIF}
-{$IFDEF VER210}
-  Variants,
-{$ENDIF}
+{$IFEND}
   Windows, ActiveX, OPCtypes, OPCDA;
 
 function ServerAddGroup(ServerIf: IOPCServer; Name: string; Active: BOOL;
