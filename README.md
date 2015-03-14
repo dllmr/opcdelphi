@@ -11,6 +11,4 @@ Sample code for OPC client and server programming using Delphi and C++Builder.  
 
  * Code samples showing various techniques for OPC client and server programming using C++Builder, _some of which rely on commercial OPC products_.
 
-----
-
 _This source code was originally hosted at [OPC Programmers' Connection](http://www.opcconnect.com/). OPC is a registered trademark of [OPC Foundation](http://www.opcfoundation.org/)._
