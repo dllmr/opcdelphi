@@ -7,7 +7,7 @@ Sample code for OPC client and server programming using Delphi and C++Builder.  
  * Delphi conversions of the OPC custom COM interfaces;
  * Simple Delphi OPC client samples.
  
-In addition, the [archive release](https://github.com/dllmr/opcdelphi/tree/archive) includes the following:
+In addition, the [archive release](https://github.com/dllmr/opcdelphi/releases/tag/archive) includes the following:
 
 **Delphi**
 
